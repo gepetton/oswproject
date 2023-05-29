@@ -127,24 +127,24 @@ class MiniPlayer(QtWidgets.QMainWindow):
             return
 
         try: #delete
-            val = self.data_queue.get(block=False) #delete
+            val = self.data_queue.get(block=False) 
         except queue.Empty: 
-            return #delete
+            return 
 
         if val == '<':
             self.mediaplayer.set_rate(self.mediaplayer.get_rate() * 0.5) 
             return #delete
         if val == '>': 
             self.mediaplayer.set_rate(self.mediaplayer.get_rate() * 2) 
-            return #delete
+            return 
         if val == 'P': 
-            self.mediaplayer.play() #delete
+            self.mediaplayer.play() 
             return 
         if val == 'p': 
-            self.mediaplayer.pause() #delete
+            self.mediaplayer.pause() 
             return 
         if val == 'S':
-            self.mediaplayer.stop() #delete
+            self.mediaplayer.stop() 
             return 
 
         val = int(val) 
